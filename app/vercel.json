@@ -1,0 +1,9 @@
+{
+  "buildCommand": "next build",
+  "devCommand": "next dev",
+  "installCommand": "npm ci",
+  "env": ["TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"],
+  "git": {
+    "deploymentEnabled": true
+  }
+}
