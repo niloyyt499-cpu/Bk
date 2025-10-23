@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+  /* Basic Reset for consistent styling across browsers */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Light gray background */
+    color: #333;
+  }
+
+  form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Slightly wider form */
+    text-align: center; /* Center form elements */
+  }
+
+  h2 {
+    margin-bottom: 30px;
+    color: #007bff; /* Blue heading */
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 100%; /* Full width for inputs */
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #ced4da; /* Light border */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #80bdff; /* Blue border on focus */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Light blue shadow on focus */
+  }
+
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder {
+    color: #a0a0a0; /* Lighter placeholder text */
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 500px) {
+    form {
+      margin: 20px;
+      padding: 30px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    input[type="email"],
+    input[type="password"],
+    button[type="submit"] {
+      padding: 12px;
+      font-size: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+<form id="loginForm">
+  <h2>Login to Your Account</h2>
+  <input type="email" name="email" placeholder="Email" autocomplete="username" required>
+  <input type="password" name="password" placeholder="Password" autocomplete="current-password" required>
+  <button type="submit">Login</button>
+</form>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  if(confirm("Allow autofill?")) {
+    alert("Autofill allowed. Form submitted (demonstration only).");
+    // For a real application, you would handle the form submission here,
+    // potentially sending data to a server or integrating with an authentication service.
+    // Uncomment the line below if you want the form to actually submit after confirmation
+    // this.submit();
+  } else {
+    alert("Autofill denied.");
+  }
+});
+</script>
+</body>
+</html>
