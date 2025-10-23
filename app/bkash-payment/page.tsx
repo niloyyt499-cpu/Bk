@@ -2,13 +2,13 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Card, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/card"
+import { Avatar, AvatarFallback } from "@/components/avatar"
+import { Input } from "@/components/input"
+import { Button } from "@/components/button"
 import { ShoppingCart } from "lucide-react" // Removed Copy icon
 import { useState } from "react"
-import VerificationPage from "./verification-page"
+import VerificationPage from "./verification-page/page"
 // Removed import for useCopyToClipboard
 
 export default function BkashPayment() {
