@@ -18,6 +18,7 @@
 
     /* Next.js */
     "incremental": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }
